@@ -6,17 +6,14 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-			ConsoleLoader loader = new ConsoleLoader();
+			FileLoader loader = new FileLoader("input.txt");
 			string[] strings = loader.LoadData();
 
 			Archiver archiver = new Archiver(strings);
 			strings = archiver.ArchiveArray();
 
-			ConsoleWriter writer = new ConsoleWriter(strings);
+			FileWriter writer = new FileWriter("result.txt", strings);
 			writer.WriteData();
-
-			int n = 1;
-			Console.WriteLine(Convert.ToChar(n));
 
 			Console.ReadKey();
         }
