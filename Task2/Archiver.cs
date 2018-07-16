@@ -54,7 +54,7 @@ namespace Task2
 				sLetter.Index++;
 				return sLetter;
 			});
-			rightPart = rightPart.Prepend(new SpecifiedLetter(Convert.ToChar(number), position, rightPart.Last().IndexOfString));
+			rightPart = rightPart.Prepend(new SpecifiedLetter(Convert.ToChar(Convert.ToString(number)), position, rightPart.Last().IndexOfString));
 			sLetters = leftPart.Concat(rightPart);
 			return sLetters;
 		}
